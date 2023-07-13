@@ -1,3 +1,8 @@
 .box{
-    height: 500px;
+    height: 300px;
+}
+
+body{
+    background-image: url(../img/bg.png);
+    background-size: cover;
 }
