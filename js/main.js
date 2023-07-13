@@ -12,7 +12,7 @@ setInterval(function(){
     let hours = Math.floor((millDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     let minutes = Math.floor((millDiff % (1000 * 60 * 60)) / (1000 * 60));
     let seconds = Math.floor((millDiff % (1000 * 60)) / 1000);
-    visibleTimer.innerHTML = `${hours}:${minutes}:${seconds}; `
+    visibleTimer.innerHTML = `${hours}:${minutes}:${seconds}`
 } , 100);
 
 
