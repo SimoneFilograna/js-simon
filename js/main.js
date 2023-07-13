@@ -6,13 +6,17 @@ console.log(countdownDate);
 
 
 
-setInterval(function(){    
+let mainTimer = setInterval(function(){    
     const nowDate = new Date().getTime();
     const millDiff = countdownDate - nowDate;
     let hours = Math.floor((millDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     let minutes = Math.floor((millDiff % (1000 * 60 * 60)) / (1000 * 60));
     let seconds = Math.floor((millDiff % (1000 * 60)) / 1000);
-    visibleTimer.innerHTML = `${hours}:${minutes}:${seconds}`
+    visibleTimer.innerHTML = `${hours}:${minutes}:${seconds}`;
+    if (millDiff > 0 ){
+        clearInterval(mainTimer);
+        isibleTimer.innerHTML = "LET'S START";
+    }
 } , 100);
 
 
