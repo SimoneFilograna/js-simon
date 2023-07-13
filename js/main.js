@@ -13,7 +13,7 @@ let mainTimer = setInterval(function(){
     let minutes = Math.floor((millDiff % (1000 * 60 * 60)) / (1000 * 60));
     let seconds = Math.floor((millDiff % (1000 * 60)) / 1000);
     visibleTimer.innerHTML = `${hours}:${minutes}:${seconds}`;
-    if (millDiff > 0 ){
+    if (millDiff < 0 ){
         clearInterval(mainTimer);
         isibleTimer.innerHTML = "LET'S START";
     }
