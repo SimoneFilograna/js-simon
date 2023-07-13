@@ -9,9 +9,9 @@ console.log(countdownDate)
 setInterval(function(){    
     const nowDate = new Date().getTime();
     const millDiff = countdownDate - nowDate;
-    var hours = Math.floor((millDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    var minutes = Math.floor((millDiff % (1000 * 60 * 60)) / (1000 * 60));
-    var seconds = Math.floor((millDiff % (1000 * 60)) / 1000);
+    let hours = Math.floor((millDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    let minutes = Math.floor((millDiff % (1000 * 60 * 60)) / (1000 * 60));
+    let seconds = Math.floor((millDiff % (1000 * 60)) / 1000);
     visibleTimer.innerHTML = `${hours}:${minutes}:${seconds} `
 } , 100);
 
